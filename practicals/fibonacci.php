@@ -2,9 +2,6 @@
 
 /**
  * Generates a Fibonacci sequence.
- *
- * @param int $length The number of terms in the sequence to generate.
- *
  * @return array The generated Fibonacci sequence.
  */
 function generateFibonacciSequence($length) {

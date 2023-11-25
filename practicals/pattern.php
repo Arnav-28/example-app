@@ -1,6 +1,5 @@
 <?php
 
-// Number of rows for the inverted triangle
 $numberOfRows = 5;
 
 // Loop through each row

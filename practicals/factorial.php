@@ -2,9 +2,7 @@
 
 /**
  * Calculates the factorial of a given number using a loop.
- *
- * @param int $number The number for which the factorial is to be calculated.
- *
+
  * @return int The factorial of the given number.
  */
 function calculateFactorial($number) {

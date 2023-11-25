@@ -1,6 +1,5 @@
 <?php
 
-// Initial values
 $firstNumber = 5;
 $secondNumber = 10;
 
