@@ -1,17 +1,22 @@
 <?php
+// Task 5: Inverted Triangle Pattern
 
-$numberOfRows = 5;
+// Specify the number of rows for the inverted triangle
+$rows = 5;
 
-// Loop through each row
-for ($currentRow = $numberOfRows; $currentRow >= 1; $currentRow--) {
+// Loop to generate the inverted triangle pattern
+for ($i = $rows; $i >= 1; --$i) {
+    // Print spaces
+    for ($j = $rows - $i; $j > 0; --$j) {
+        echo " ";
+    }
 
-    // Print asterisks for the current row
-    for ($asteriskCount = 0; $asteriskCount <= $currentRow - 1; $asteriskCount++) {
+    // Print asterisks
+    for ($j = 2 * $i - 1; $j > 0; --$j) {
         echo "*";
     }
 
-    // Move to the next line after completing the row
     echo "\n";
 }
-
 ?>
+

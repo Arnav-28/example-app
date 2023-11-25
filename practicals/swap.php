@@ -1,17 +1,19 @@
 <?php
+// Task 2: Number Swapping
 
-$firstNumber = 5;
-$secondNumber = 10;
+// Define two numbers to be swapped
+$number1 = 5;
+$number2 = 10;
 
-// Displaying values before swapping
-echo "Before swapping: firstNumber = $firstNumber, secondNumber = $secondNumber\n";
+// Output the original numbers
+echo "Original Numbers: Number 1 = $number1, Number 2 = $number2\n";
 
-// Swapping logic without using a function
-$temporaryVariable = $firstNumber;
-$firstNumber = $secondNumber;
-$secondNumber = $temporaryVariable;
+// Swap the numbers using a temporary variable
+$temp = $number1;
+$number1 = $number2;
+$number2 = $temp;
 
-// Displaying values after swapping
-echo "After swapping: firstNumber = $firstNumber, secondNumber = $secondNumber\n";
-
+// Output the swapped numbers
+echo "Swapped Numbers: Number 1 = $number1, Number 2 = $number2\n";
 ?>
+

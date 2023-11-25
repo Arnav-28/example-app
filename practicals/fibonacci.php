@@ -1,32 +1,22 @@
 <?php
+// Task 3: Fibonacci Sequence
 
-/**
- * Generates a Fibonacci sequence.
- * @return array The generated Fibonacci sequence.
- */
-function generateFibonacciSequence($length) {
-    // Initialize the sequence with the first two numbers
-    $fibonacciSequence = [0, 1];
+// Function to generate Fibonacci sequence up to n terms
+function generateFibonacci($n) {
+    $fibonacci = [0, 1];
 
-    // Continue generating the sequence until the desired length is reached
-    while (count($fibonacciSequence) < $length) {
-        // Calculate the next number in the sequence
-        $nextNumber = $fibonacciSequence[count($fibonacciSequence) - 1] + $fibonacciSequence[count($fibonacciSequence) - 2];
-
-        // Add the next number to the sequence
-        $fibonacciSequence[] = $nextNumber;
+    for ($i = 2; $i < $n; $i++) {
+        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
     }
 
-    return $fibonacciSequence;
+    return $fibonacci;
 }
 
-// Number of terms in the sequence
+// Specify the number of terms in the sequence
 $numberOfTerms = 10;
 
-// Generate and display the Fibonacci sequence
-$fibonacciSequence = generateFibonacciSequence($numberOfTerms);
-
-// Display the generated sequence with a message
-echo "Fibonacci Sequence (first $numberOfTerms terms): " . implode(", ", $fibonacciSequence) . "\n";
-
+// Output the Fibonacci sequence
+echo "Fibonacci Sequence up to $numberOfTerms terms: ";
+echo implode(", ", generateFibonacci($numberOfTerms));
 ?>
+

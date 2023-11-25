@@ -1,31 +1,19 @@
 <?php
+// Task 4: Factorial of a Number
 
-/**
- * Calculates the factorial of a given number using a loop.
-
- * @return int The factorial of the given number.
- */
+// Function to calculate the factorial of a number
 function calculateFactorial($number) {
-    // Initialize the result to 1
-    $result = 1;
-
-    // Loop through each number from 1 to $number
-    for ($i = 1; $i <= $number; $i++) {
-        // Multiply the result by the current loop variable
-        $result *= $i;
+    if ($number === 0 || $number === 1) {
+        return 1;
+    } else {
+        return $number * calculateFactorial($number - 1);
     }
-
-    // Return the calculated factorial
-    return $result;
 }
 
-// Number for which factorial is to be calculated
-$numberToCalculate = 5;
+// Specify the number for which to calculate the factorial
+$numberToFactorial = 5;
 
-// Calculate factorial
-$factorialResult = calculateFactorial($numberToCalculate);
-
-// Display the result
-echo "Factorial of $numberToCalculate is: $factorialResult\n";
-
+// Output the factorial of the specified number
+echo "Factorial of $numberToFactorial: " . calculateFactorial($numberToFactorial);
 ?>
+

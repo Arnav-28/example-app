@@ -1,7 +1,7 @@
 <?php
-// This is a simple "Hello, World!" program in PHP
+// Task 1: Hello World
 
+// Output the classic "Hello, World!" message
 echo "Hello, World!";
-
-// End of the program
 ?>
+
