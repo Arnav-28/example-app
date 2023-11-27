@@ -4,21 +4,47 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models;
 
 class Song extends Model
 {
     use HasFactory;
-    // Add fillable fields corresponding to database columns
+    // Add fillable fields corresponds to database columns
     protected $fillable=['title', 'artist'];
-
-    // Getter function for title field
-    public function getTitle(){
+    public function title() {
         return $this->title;
     }
-     // Getter function for title field
-     public function getArtist(){
+
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+
+    public function artist() {
         return $this->artist;
     }
+
+
+    public function setArtist($artist) {
+        $this->artist = $artist;
+    }
+
+    public function genre() {
+        return $this->genre;
+    }
+
+
+    public function setGenre($genre) {
+        $this->genre = $genre;
+    }
+
+    public function tempo() {
+        return $this->tempo;
+    }
+
+
+    public function setTempo($tempo) {
+        if (!is_numeric($tempo) || is_float($tempo)) {
+            throw new \InvalidArgumentException("inputs must be numeric.");
+        }
+        $this->tempo = $tempo;
+    }
 }
-?>

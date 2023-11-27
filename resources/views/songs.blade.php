@@ -1,6 +1,18 @@
-<x-layouts.main pageName='All Songs'>
-@section('content')
-<x-songs-list :songs="$songs">
-</x-songs-list>
-@endsection
-</x-layouts.main>
+<html>
+
+<body>
+
+</b<table>
+<tr>
+<th>Title</th>
+<th>Artist</th>
+</tr>
+@foreach ($songs as $song)
+<tr>
+<td>{{ $song->title() }}</td>
+<td>{{ $song->artist() }}</td><br>
+</tr>
+@endforeach
+</table></body>
+
+</html>
