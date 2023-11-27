@@ -1,35 +1,26 @@
 <?php
 namespace Practicals;
-/**
- * Class Song
- *
- * Represents a musical song with properties such as title, artist, genre, and tempo.
- */
+
+use InvalidArgumentException;
+
 class Song {
-    // Properties
     private $title;
     private $artist;
     private $genre;
     private $tempo;
 
     /**
-     * Song constructor.
-     *
-     * @param string $title  The title of the song.
-     * @param string $artist The artist of the song.
-     * @param string $genre  The genre of the song.
-     * @param int    $tempo  The tempo of the song.
+     * Constructor to initialize the Song object.
      */
-    public function __construct($title, $artist, $genre, $tempo) {
-        $this->title = $title;
-        $this->artist = $artist;
-        $this->genre = $genre;
-        $this->tempo = $tempo;
+    public function __construct() {
+        $this->title = '';
+        $this->artist = '';
+        $this->genre = '';
+        $this->tempo = 0;
     }
 
     /**
-     * Get the title of the song.
-     *
+     * Getter for the title property.
      * @return string The title of the song.
      */
     public function getTitle() {
@@ -37,8 +28,7 @@ class Song {
     }
 
     /**
-     * Set the title of the song.
-     *
+     * Setter for the title property.
      * @param string $title The title of the song.
      */
     public function setTitle($title) {
@@ -46,8 +36,7 @@ class Song {
     }
 
     /**
-     * Get the artist of the song.
-     *
+     * Getter for the artist property.
      * @return string The artist of the song.
      */
     public function getArtist() {
@@ -55,8 +44,7 @@ class Song {
     }
 
     /**
-     * Set the artist of the song.
-     *
+     * Setter for the artist property.
      * @param string $artist The artist of the song.
      */
     public function setArtist($artist) {
@@ -64,8 +52,7 @@ class Song {
     }
 
     /**
-     * Get the genre of the song.
-     *
+     * Getter for the genre property.
      * @return string The genre of the song.
      */
     public function getGenre() {
@@ -73,8 +60,7 @@ class Song {
     }
 
     /**
-     * Set the genre of the song.
-     *
+     * Setter for the genre property.
      * @param string $genre The genre of the song.
      */
     public function setGenre($genre) {
@@ -82,8 +68,7 @@ class Song {
     }
 
     /**
-     * Get the tempo of the song.
-     *
+     * Getter for the tempo property.
      * @return int The tempo of the song.
      */
     public function getTempo() {
@@ -91,13 +76,31 @@ class Song {
     }
 
     /**
-     * Set the tempo of the song.
-     *
+     * Setter for the tempo property.
      * @param int $tempo The tempo of the song.
      */
     public function setTempo($tempo) {
-        $this->tempo = $tempo;
+        if (!is_numeric($tempo) || floatval($tempo) != intval($tempo)) {
+            throw new \InvalidArgumentException('Tempo must be an integer or an integer string.');
+        }
+    
+        $this->tempo = (int) $tempo;
     }
+    
+    
 }
+/*
+// Example usage:
+$song = new Song();
 
+$song->setTitle("Bohemian Rhapsody");
+$song->setArtist("Queen");
+$song->setGenre("Rock");
+$song->setTempo("70 BPM");
+
+echo "Title: " . $song->getTitle() . "\n";
+echo "Artist: " . $song->getArtist() . "\n";
+echo "Genre: " . $song->getGenre() . "\n";
+echo "Tempo: " . $song->getTempo() . "\n";
+*/
 ?>
