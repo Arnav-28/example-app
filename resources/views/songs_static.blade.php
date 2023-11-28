@@ -113,15 +113,14 @@
             </tr>
             </thead>
             <tbody>
-            <!-- Add your songs dynamically here -->
 
             @foreach ($songs as $song)
 	        <tr>
-	            <td>1</td>
-	            <td>{{ $song->title() }}</td>
-    	        <td>{{ $song->artist() }}</td><br>
-                <td>Album 1</td>
-                <td>3:30</td>
+	        <td>1</td><br>
+	        <td>{{ $song->title() }}</td>
+    	    <td>{{ $song->artist() }}</td><br>
+    	    <td>album1</td><br>
+    	    <td>3:30</td><br>
    	    
 	    </tr>
 	    @endforeach
@@ -129,10 +128,7 @@
             </tbody>
         </table>
 
-        <footer>
-            <p>&copy; 2023 Your Company</p>
-            <p><a href="#">About</a> | <a href="#">Terms of Service</a></p>
-        </footer>
+        
 
         <!-- Playlist form -->
         <form>
@@ -146,11 +142,15 @@
             </select>
             <button type="button">Save Playlist</button>
         </form>
+        
 
     </div>
 
 </div>
-
+<footer>
+            <p>&copy; 2023 Your Company</p>
+            <p><a href="#">About</a> | <a href="#">Terms of Service</a></p>
+        </footer>
 </body>
 </html>
 
