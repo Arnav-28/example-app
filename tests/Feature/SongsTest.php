@@ -5,17 +5,22 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use Practicals\Song;
 
 class SongsTest extends TestCase
 {
-
+    /**
+     * A basic feature test songs.
+     */
     public function testSongsOk(): void
     {
         $response = $this->get('/songs');
+
         $response->assertStatus(200);
     }
-    
+
+    public function testsongs_staticOk(): void
+    {
+        $response =$this->get("/songs_static");
+        $response->assertStatus(200);
+    }
 }
-
-

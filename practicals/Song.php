@@ -13,9 +13,12 @@ class Song {
      * Constructor to initialize the Song object.
      */
     public function __construct() {
+    $this->sr = '';
         $this->title = '';
         $this->artist = '';
         $this->genre = '';
+        $this->album = '';
+        $this->duration = '';
         $this->tempo = 0;
     }
 
@@ -41,6 +44,22 @@ class Song {
      */
     public function getArtist() {
         return $this->artist;
+    }
+        public function album() {
+        return $this->album;
+    }
+    
+    public function setAlbum($album) {
+        $this->album = $album;
+        
+    }
+    
+    public function duration() {
+        return $this->duration;
+    }
+    
+    public function setDuration($duration) {
+        $this->duration = $duration;
     }
 
     /**

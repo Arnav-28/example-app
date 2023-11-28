@@ -16,13 +16,19 @@ class SongSeeder extends Seeder
     {
         // Seed a few songs
         Song::create([
+            'sr' => '1',
             'artist' => 'Eminem',
             'title' => 'Stan',
+            'album' => 'The Marshall Mathers LP',
+            'duration' => '6:44',
         ]);
 
         Song::create([
+        'sr' => '2',
             'artist' => 'A P Dhillon',
             'title' => 'With You',
+            'album' => 'The Marshall Mathers LP',
+            'duration' => '6:44',
         ]);
     }
 }

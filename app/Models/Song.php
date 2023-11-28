@@ -9,7 +9,17 @@ class Song extends Model
 {
     use HasFactory;
     // Add fillable fields corresponds to database columns
-    protected $fillable=['title', 'artist'];
+    protected $fillable=['sr', 'title', 'artist', 'album', 'duration'];
+    
+    // public function sr() {
+    //     return $this->sr;
+    // }
+
+
+    // public function setSr($sr) {
+    //     $this->sr = $sr;
+    // }
+    
     public function title() {
         return $this->title;
     }
@@ -26,6 +36,23 @@ class Song extends Model
     public function setArtist($artist) {
         $this->artist = $artist;
     }
+    
+    // public function album() {
+    //     return $this->album;
+    // }
+    
+    // public function setAlbum($album) {
+    //     $this->album = $album;
+        
+    // }
+    
+    // public function duration() {
+    //     return $this->duration;
+    // }
+    
+    // public function setDuration($duration) {
+    //     $this->duration = $duration;
+    // }
 
     public function genre() {
         return $this->genre;
