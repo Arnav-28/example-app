@@ -7,7 +7,7 @@
     <link href="{{ asset('css/layouts/main.css') }}" rel="stylesheet" />
 </head>
 <body>
-
+@yield('content')
 <div id="container">
 
     <div id="sidebar">
