@@ -30,5 +30,12 @@ class SongSeeder extends Seeder
             'album' => 'The Marshall Mathers LP',
             'duration' => '6:44',
         ]);
+        Song::create([
+            'sr' => '3',
+                'artist' => 'Metallica',
+                'title' => 'Nothing Else Matters',
+                'album' => 'The Marshall Mathers LP',
+                'duration' => '3:44',
+            ]);
     }
 }

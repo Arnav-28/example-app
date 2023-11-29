@@ -26,7 +26,7 @@ class Song {
      * Getter for the title property.
      * @return string The title of the song.
      */
-    public function getTitle() {
+    public function title() {
         return $this->title;
     }
 
@@ -34,15 +34,13 @@ class Song {
      * Setter for the title property.
      * @param string $title The title of the song.
      */
-    public function setTitle($title) {
-        $this->title = $title;
-    }
+
 
     /**
      * Getter for the artist property.
      * @return string The artist of the song.
      */
-    public function getArtist() {
+    public function artist() {
         return $this->artist;
     }
         public function album() {
@@ -56,6 +54,10 @@ class Song {
     
     public function duration() {
         return $this->duration;
+    }
+
+        public function setTitle($title) {
+        $this->title = $title;
     }
     
     public function setDuration($duration) {

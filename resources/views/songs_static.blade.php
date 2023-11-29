@@ -28,6 +28,9 @@
                     <a href="#">New Playlist</a>
                 </div>
             </div>
+
+
+
             <table>
                 <thead>
                     <tr>
