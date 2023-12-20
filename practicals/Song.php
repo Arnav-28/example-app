@@ -40,7 +40,11 @@ class Song {
      * Getter for the artist property.
      * @return string The artist of the song.
      */
-    public function artist() {
+    public function sr() {
+        return $this->sr;
+    }
+    
+     public function artist() {
         return $this->artist;
     }
         public function album() {

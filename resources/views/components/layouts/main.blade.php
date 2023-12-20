@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? "Cool Web App" }}</title>
-    @yield('content')
+    
     <link href="{{ asset('css/layouts/main.css') }}" rel="stylesheet" />
 </head>
 <body>
@@ -28,31 +28,9 @@
                     <a href="#">New Playlist</a>
                 </div>
             </div>
-
-
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Serial No</th>
-                        <th>Song Title</th>
-                        <th>Artist Name</th>
-                        <th>Album Name</th>
-                        <th>Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($songs as $song)
-	        <tr>
-	        <td>1</td><br>
-	        <td>{{ $song->title() }}</td>
-    	    <td>{{ $song->artist() }}</td><br>
-    	    <td>album1</td><br>
-    	    <td>3:30</td><br>
-   	        </tr>
-	    @endforeach
-                </tbody>
-            </table>
+            
+                @yield('content')
+                    
             <form>
                 <input type="text" placeholder="Playlist Name">
                 <select>
